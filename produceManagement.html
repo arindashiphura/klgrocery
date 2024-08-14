@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Produce</title>
+    <link rel="stylesheet" href="css/produceManagement.css">
+</head>
+<body>
+
+    <main class="Form-container">
+    <h1>Add New Produce</h1>
+    <form id="add-produce-form">
+        <label for="name">Name of Produce:</label>
+        <input type="text" id="name" name="name" required pattern="[A-Za-z0-9\s]+" title="Alphanumeric characters only">
+
+        <label for="type">Type of Produce:</label>
+        <input type="text" id="type" name="type" required pattern="[A-Za-z]{2,}" title="Alphabetic characters only, at least 2 characters">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time">
+
+        <label for="tonnage">Tonnage (kg):</label>
+        <input type="number" id="tonnage" name="tonnage" required min="1" step="any" title="Numeric value, at least 1">
+
+        <label for="cost">Cost (UgX):</label>
+        <input type="number" id="cost" name="cost" required min="0" step="any" title="Numeric value, at least 5 characters">
+
+        <label for="dealer">Dealer's Name:</label>
+        <input type="text" id="dealer" name="dealer" required pattern="[A-Za-z0-9\s]+" title="Alphanumeric characters only">
+
+        <label for="branch">Branch Name:</label>
+        <input type="text" id="branch" name="branch" required list="branch-list">
+        <datalist id="branch-list">
+            <!-- Options will be dynamically populated -->
+        </datalist>
+
+        <label for="contact">Contact:</label>
+        <input type="tel" id="contact" name="contact" required pattern="\d{10}" title="Valid phone number format">
+
+        <label for="price">Price to be Sold At:</label>
+        <input type="number" id="price" name="price" required min="0" step="any" title="Numeric value">
+
+        <button type="submit">Add Produce</button>
+    </form>
+
+</main>
+    <script src="js/produceManagement.js"></script>
+</body>
+</html>

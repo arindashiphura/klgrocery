@@ -95,20 +95,10 @@
         <div class="content-box-1">
           <p class="head-1"> Overview</p>
 <br>
-               <div class="m-box active">
-             <p>Top sselling produce <br> <span class="no-1">last months</span></p>
-             <span class="no">+230000</span>
-            </div>
-
-            <div class="m-box active">
-              <p>Top sselling produce <br> <span class="no-1">last months</span></p>
-              <span class="no">+230000</span>
-             </div>
-
-             <div class="m-box active">
-              <p>Top sselling produce <br> <span class="no-1">last months</span></p>
-              <span class="no">+230000</span>
-             </div>
+<div class="charts">
+  <canvas id="salesChart"></canvas>
+  <canvas id="stockChart"></canvas>
+</div>
         </div>
 
       </div>
@@ -141,11 +131,12 @@
         <div class="content-box-1">
           
           <p class="head-1"> Produce <span> View All</span></p>
-<br>
-            <p class="act-p"> <i class="fa fa -circle"></i> Total sales of produce in the &nbsp;&nbsp;&nbsp;&nbsp; hhgrocery store </p>
-            <p class="act-p"> <i class="fa fa -circle"></i> Total sales of produce in the &nbsp;&nbsp;&nbsp;&nbsp; hhgrocery store </p>
-            <p class="act-p"> <i class="fa fa -circle"></i> Total sales of produce in the &nbsp;&nbsp;&nbsp;&nbsp; hhgrocery store </p>
-            <p class="act-p"> <i class="fa fa -circle"></i> Total sales of produce in the &nbsp;&nbsp;&nbsp;&nbsp; hhgrocery store </p>
+<br><div class="dashboard">
+   
+</div>
+
+
+
         </div>
 
       </div>
@@ -246,10 +237,51 @@
 
   </script>
 
-  <script type="text/javascript">
-    $(document).ready(function(){
-        
-    }) 
-  </script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+  const ctx1 = document.getElementById('salesChart').getContext('2d');
+  const salesChart = new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: ['Beans', 'Grain Maize', 'Ground Nuts', 'Cow peas'],
+      datasets: [{
+        label: 'Total Sales (UgX)',
+        data: [1200000, 1500000, 900000, 900000],
+        backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+      }]
+    },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      }
+    }
+  });
+
+  // const ctx2 = document.getElementById('stockChart').getContext('2d');
+  // const stockChart = new Chart(ctx2, {
+  //   type: 'pie',
+  //   data: {
+  //     labels: ['Beans', 'Maize', 'Rice', 'Soybeans'],
+  //     datasets: [{
+  //       label: 'Current Stock (kg)',
+  //       data: [3000, 2000, 1500, 1500],
+  //       backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56', '#4BC0C0']
+  //     }]
+  //   },
+  //   options: {
+  //     responsive: true,
+  //     plugins: {
+  //       legend: {
+  //         position: 'top',
+  //       }
+  //     }
+  //   }
+  // });
+</script>
+
+
+
 </body>
 </html>
