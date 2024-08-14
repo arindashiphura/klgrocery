@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Report Form</title>
+    <link rel="stylesheet" href="../css/repsales.css">
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="form-left">
+    <form id="salesReportForm" action="/submit-report" method="POST">
+        <h2>Sales Agent Report</h2>
+
+        <label for="agentName">Agent Name:</label>
+        <input type="text" id="agentName" name="agentName" required>
+        <span class="error" id="agentNameError">Please enter a valid name.</span>
+
+        <label for="totalSales">Total Sales (UgX):</label>
+        <input type="number" id="totalSales" name="totalSales" required min="1">
+        <span class="error" id="totalSalesError">Please enter a valid amount.</span>
+
+        <label for="transactions">Number of Transactions:</label>
+        <input type="number" id="transactions" name="transactions" required min="1">
+        <span class="error" id="transactionsError">Please enter a valid number.</span>
+
+        <label for="commission">Commission Earned (UgX):</label>
+        <input type="number" id="commission" name="commission" required min="1">
+        <span class="error" id="commissionError">Please enter a valid amount.</span>
+        <label for="comments">Comments/Notes:</label>
+        <textarea id="comments" name="comments"></textarea>
+
+
+        <button type="submit">Submit Report</button>
+
+
+    </form>
+</div>
+
+
+<div class="form-right">
+
+        <h3>Produce Sold Details</h3>
+
+        <label for="produceName">Produce Name:</label>
+        <input type="text" id="produceName" name="produceName" required pattern="[a-zA-Z\s]+" title="Alphabets only">
+        <span class="error" id="produceNameError">Please enter a valid produce name.</span>
+
+        <label for="quantitySold">Quantity Sold (kg):</label>
+        <input type="number" id="quantitySold" name="quantitySold" required min="1">
+        <span class="error" id="quantitySoldError">Please enter a valid quantity.</span>
+
+        <label for="saleDate">Sale Date:</label>
+        <input type="date" id="saleDate" name="saleDate" required>
+        <span class="error" id="saleDateError">Please select a valid date.</span>
+
+        <label for="saleTime">Sale Time:</label>
+        <input type="time" id="saleTime" name="saleTime" required>
+        <span class="error" id="saleTimeError">Please select a valid time.</span>
+
+        <label for="salePrice">Sale Price (UgX):</label>
+        <input type="number" id="salePrice" name="salePrice" required min="1">
+        <span class="error" id="salePriceError">Please enter a valid price.</span>
+
+        <label for="buyerName">Buyer's Name:</label>
+        <input type="text" id="buyerName" name="buyerName" required pattern="[a-zA-Z\s]+" title="Alphabets only">
+        <span class="error" id="buyerNameError">Please enter a valid name.</span>
+
+        <label for="contact">Buyer's Contact:</label>
+        <input type="tel" id="contact" name="contact" required pattern="^\+256\d{9}$" title="Valid phone number, e.g., +256XXXXXXXXX">
+        <span class="error" id="contactError">Please enter a valid phone number.</span>
+
+        <label for="branchName">Branch Name:</label>
+        <select id="branchName" name="branchName" required>
+            <option value="">Select Branch</option>
+            <option value="Branch 1">Branch 1</option>
+            <option value="Branch 2">Branch 2</option>
+            <!-- Add other branches here -->
+        </select>
+        <span class="error" id="branchNameError">Please select a branch.</span>
+
+        <label for="comments">Comments/Notes:</label>
+        <textarea id="comments" name="comments"></textarea>
+
+        <button type="submit">Submit Report</button>
+    </form>
+</div>
+
+</div>
+</div>
+
+<div class="form-right">
+    <form id="produceSellingForm">
+            <h2>Produce Sold</h2>
+            
+            <label for="produceName">Name of Produce:</label>
+            <input type="text" id="produceName" name="produceName" required pattern="[a-zA-Z0-9\s]+" title="Alpha-numeric characters only">
+            
+            <label for="tonnage">Tonnage (kg):</label>
+            <input type="number" id="tonnage" name="tonnage" required min="0" step="0.01" title="Must be a positive number">
+            
+            <label for="amountPaid">Amount Paid (UgX):</label>
+            <input type="number" id="amountPaid" name="amountPaid" required min="10000" step="0.01" title="Must be numeric and at least 5 characters">
+            
+            <label for="buyersName">Buyer’s Name:</label>
+            <input type="text" id="buyersName" name="buyersName" required pattern="[a-zA-Z0-9\s]{2,}" title="Alpha-numeric characters only, minimum 2 characters">
+            
+            <label for="salesAgentName">Sales Agent’s Name:</label>
+            <input type="text" id="salesAgentName" name="salesAgentName" required pattern="[a-zA-Z0-9\s]{2,}" title="Alpha-numeric characters only, minimum 2 characters">
+            
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+            
+            <button type="submit">Submit </button>
+        </form>
+
+</div>
+</div>
+
+   <script src="js/repsales.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Happy Hoe Grocery</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            font-family:Impact, Haettenschweiler, 'Arial Narrow ', sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background-color: #19e10ad2;
+            justify-content: center;
+            
+        }
+        .container {
+            max-width: 1800px;
+            height: 1000px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: rgb(193, 198, 193);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-color: black;
+            transition: border-color 0.3s ease;
+            
+        }
+        h1 {
+            color: #333;
+        }
+        p {
+            color: #555;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 10px;
+            color: #fff;
+            background-color: #1bcd18;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #20d619;
+        }
+        .logo {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="container">
+        <img src="img/hhg.jpg" alt="Happy Hoe Grocery Logo" class="logo">
+        <h1>Welcome to Happy Hoe Grocery</h1>
+        <p class="dynamic-greeting" id="dynamicGreeting"></p>
+        <p>We're glad to have you here! Explore our offerings and manage your stock efficiently.</p>
+        <a href="index.html" class="button">Homepage</a>
+        <a href="stocklevels.html" class="button">View Stock Levels</a>
+        <a href="sales.html" class="button">Record Sales</a>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="bg-white text-center h-100 p-4 p-xl-5">
+                    <img class="img-fluid mb-4" src="img/grains.jpg" alt="">
+                    <img class="img-fluid mb-4" src="img/grains.jpg" alt="">                   
+                </div>
+                <h3>Together we can</h3>
+                
+
+            </div>
+        <!-- <img src="img/blog2.jpg" alt=""> -->
+
+    </div>
+    <script>
+        function getGreeting() {
+            const now = new Date();
+            const hours = now.getHours();
+            if (hours < 12) return 'Good morning!';
+            if (hours < 18) return 'Good afternoon!';
+            return 'Good evening!';
+        }
+
+        document.getElementById('dynamicGreeting').innerText = getGreeting();
+    </script>
+</body>
+</html>

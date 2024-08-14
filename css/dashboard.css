@@ -1,0 +1,543 @@
+.clearfix {
+    clear: both;
+  }
+  
+  .logo {
+    margin: 0;
+    margin-left: 28px;
+    font-weight: bold;
+    color: rgb(31, 35, 31);
+    margin-bottom: 30px;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 300px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(172, 176, 180, 0.833);
+    overflow-x: hidden;
+    padding-top: 30px;
+    transition: 0.3s ease-in-out;
+    font-size: 20px; /* Set a default font size for icons */
+  }
+  
+  .menu {
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: 24px; /* Ensure the icon is large enough */
+    color: white; /* Adjust color as needed */
+  }
+  
+  .menu1 {
+    float: left;
+    display: block;
+  }
+  
+  .sidenav a {
+    padding: 15px 8px 15px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(5, 6, 5);
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: white;
+    background-color: rgb(16, 205, 31);
+  }
+  
+  .sidenav{
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+  
+  }
+  #main {
+    padding: 16px;
+    margin-left: 300px;
+  }
+  
+  .head {
+    padding: 0px 6px;
+    border-bottom: 1px solid #d6d6d6a1;
+    padding-bottom: 10px;
+    overflow: auto; /* Ensures that floating children are contained */
+  }
+  
+  .col-div-6 {
+    width: 50%;
+    float: left;
+  }
+  
+  .profile {
+    display: inline-block;
+    float: right;
+    width: 200px;
+  }
+  
+  .pro-img {
+    float: left;
+    width: 40px;
+    margin-top: 8px;
+    margin-left: 20px;
+  }
+  
+  
+  .profile p{
+    color: rgb(19, 19, 20);
+    font-weight: 500;
+    margin-left: 35px;
+    margin-top: 10px;
+    font-size: 13.5px;
+    background-color: rgba(24, 220, 24, 0.856);
+    padding:  10px;
+    border-radius: 25px;
+    padding-left: 35px;
+    cursor: pointer;
+    
+  }
+  .dots{
+    margin-left: 10px;
+  
+  }
+  
+  .profile-div{
+    background-color: rgb(38, 41, 38);
+    width: 140px;
+    border: 1px solid rgba(170, 221, 221, 0.753);
+    padding: 10px 0px;
+    right: 2%;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9;
+    display: none;
+    
+  
+  }
+  .profile div:after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: white;
+    top: -6px;
+    border-left: 1px  solid rgb(6, 8, 8);
+    border-top: 1px solid rgb(2, 4, 4);
+    transform: rotate(45deg);
+    right: 10%;
+  }
+  
+  .profile-div p{
+    margin: 0px;
+    padding: 10px 20px;
+  
+  }
+  
+  .profile-div p:hover{
+    background-color: rgba(222, 232, 224, 0.8);
+    color: white;
+  }
+  
+  .notification-div{
+    background-color: rgba(255, 255, 255, 0.763);
+    width: 240px;
+    border: 1px solid rgba(176, 180, 180, 0.854);
+    padding: 10px 0px;
+    right: 25%;
+    border-radius: 5px;
+    position: absolute;
+    z-index: 9;
+    display: none;
+  }
+  .notification-div:after{
+    content: '';
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    background-color: rgba(182, 173, 173, 0.756);
+    top: -6px;
+    border-left: 1px solid rgb(8, 11, 11);
+    border-top: 1px solid rgb(2, 4, 4);
+    transform: rotate(45deg);
+    right: 10%;
+  }
+  
+  .noti-head{
+    display: block;
+    margin: 0px;
+    color: green ;
+  }
+  
+  .noti-head:hover{
+    background-color: white!important;
+    color: black!important;
+  
+  
+  }
+  .noti-head span{
+    position: absolute;
+    right:8% ;
+    top: 10px;
+    background-color: rgb(167, 40, 5);
+    color: white;
+    padding: 1px 5px;
+    border-radius: 20px;
+  }
+  .hr{
+    margin: 0px;
+    border: none;
+    background-color: rgb(13, 13, 16);
+    height: 1px;
+  }
+  
+  .notification-div p{
+    margin: 0px;
+    padding: 10px 20px;
+    color: rgb(15, 15, 34);
+  }
+  
+  .notification-div p span{
+    font-size: 11px;
+    display: block;
+  
+  }
+  
+  .notification-div p:hover{
+    background-color: rgba(18, 21, 18, 0.8);
+    color: rgba(255, 255, 255, 0.868);
+  
+  
+  }
+  
+  .search-icon{
+    position: absolute;
+    top: 25px;
+    right: 22%;
+    background-color: black;
+    color: white;
+    padding:  13px;
+    border-radius: 21%;
+    cursor: pointer;
+  }
+  
+  
+  .noti-icon{
+    position:absolute ;
+    right: 17%;
+    top: 25px;
+    background-color: rgb(17, 21, 14);
+    color: rgb(255, 255, 255);
+    padding:  13px;
+    border-radius: 21%;
+    cursor: pointer;
+  
+  }
+  
+  
+  .noti-icon:after{
+    content: '';
+    position: absolute;
+    height: 5px;
+    width: 5px;
+    background-color: rgb(5, 6, 5);
+    top: 5px;
+    right: 10%;
+    left: 20px;
+    border-radius: 5px;
+  }
+  
+  .col-div-4-1{
+    width: 33%;
+    float: left;
+    
+  }
+  
+  .box{
+    width: 88%;
+    height: 130px;
+    background-color: rgba(19, 227, 12, 0.731);
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 2px 5px 10px rgba(4, 10, 5, 0.751);
+    position: relative
+    ;
+  }
+  
+  .box.p{
+    color: rgb(5, 6, 5);
+    font-weight: 500px;
+    padding-left: 10px;
+  }
+  
+  .number{
+    font-size: 35px;
+    margin-bottom: 0px;
+    margin-top: 20px;
+  }
+  
+   .percent{
+    margin: 0px;
+    font-size: 14px;
+    color: rgb(2, 3, 2)!important;
+  
+  
+  
+  } 
+  .percent span{
+    font-size: 12px;
+    color: rgb(13, 15, 13);
+    padding-left: 3px;
+  
+  }
+  
+  .head-1{
+    font-size: 18px!important;
+    margin: 10px 0px;
+    color: rgba(24, 9, 9, 0.6);
+  
+  
+  }
+  .head-1 span{
+    float: right;
+    background-color: rgb(24, 31, 24);
+    color: white;
+    padding: 3px 10px;
+    font-size: 15px;
+  
+  
+  }
+  
+  .box-icon{
+    font-size: 20px!important;
+    margin-top: 35px!important;
+    color:white;
+    padding-right: 10px;
+    background-color: rgb(20, 27, 22);
+    padding: 15px;
+    border-radius: 25px;
+    position: absolute;
+    right: 16px;
+    top: -18px;
+    
+  }
+  
+  .box-1{
+    width: 88%;
+    height: 282px;
+    background-color: rgba(255, 255, 255, 0.276);
+    margin-left: 10px;
+    padding: 10px;
+    box-shadow: 2px 5px 10px rgb(4, 13, 13);
+    position: relative;
+  
+  
+  }
+  
+  .m-box{
+    color: rgb(25, 25, 30);
+    position: relative;
+    padding:0px 12px;
+  
+  }
+  
+  .active{
+    background-color: rgb(20, 20, 23);
+    color: white;
+    box-shadow:4px 3px 7px 3px black;
+  
+  
+  }
+  .active .no-1{
+    color: white;
+  
+  }
+  
+  .m-box p{
+    display:inline-block;
+    margin: 10px 0px;
+  
+  }
+   
+  .no{
+    position: absolute!important;
+    top: 21px;
+    right: 15px;
+    font-weight: 500;
+  
+  }
+  
+  .no-1{
+    font-size: 12px;
+    color: green;
+  
+  }
+  
+  .act-p{
+    color: black;
+    font-size: 13px;
+  }
+  
+  
+  .act-p .fa{
+    color: maroon!important;
+  
+  }
+  
+  .content-box-1{
+    padding: 0px 10px;
+  
+  }
+  .col-div-12{
+    width: 100%;
+  }
+  
+  .col-div-4{
+    width: 30%;
+    float: left;
+  }
+  
+  .circle-wrap{
+    margin: 50px auto;
+    width: 150px;
+    height: 150px;
+    background: rgb(11, 190, 11);
+    border-radius: 50%;
+  }
+  
+  .circle-wrap .circle .mask,
+   .circle-wrap .circle .fill{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+   }
+  
+   .circle-wrap .circle .mask{
+    clip: rect(0px, 150px, 150px,75px);
+   }
+   
+   .circle-wrap .circle .fill{
+    clip: rect(0px, 75px, 150px, 0px);
+    background-color: rgb(2, 2, 2);
+   }
+   
+  
+  
+  .circle-wrap .circle .mask .full,
+  .circle-wrap .circle .fill{
+    animation: fill ease-in-out 3s;
+    transform: rotate(126deg);
+  }
+  
+  @keyframes fill{
+    0%{
+      transform: rotate(0deg);
+    }
+    100%{
+      transform: rotate(126deg);
+    }
+  }
+  .circle-wrap .inside-circle{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    line-height: 130px;
+    text-align: center;
+    margin-top: 10px;
+    margin-left:10px ;
+    z-index: 100;
+    font-size: 2cm;
+    color: rgb(11, 9, 9);
+    position: absolute;
+    background-color: rgb(220, 220, 228);
+  
+  
+  }
+  
+  /* General styling for the col-div-12 container */
+  .col-div-12 {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+  }
+  
+  /* Styling for the box-8 */
+  .box-8 {
+    background-color: #f9f9f9; /* Light background color */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Padding around content */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Styling for the content-box */
+  .content-box {
+    margin-bottom: 20px; /* Space below the content box */
+  }
+  
+  /* Styling for the heading */
+  .head-1 {
+    font-size: 1.5em; /* Larger font size for heading */
+    margin: 0; /* Remove default margin */
+    color: #333; /* Dark text color */
+    font-weight: bold; /* Bold text */
+    display: flex; /* Flexbox for aligning the "See All" span */
+    justify-content: space-between; /* Space between heading and "See All" */
+    align-items: center; /* Center items vertically */
+  }
+  
+  /* Styling for the "See All" span */
+  .head-1 span {
+    font-size: 0.9em; /* Slightly smaller font size */
+    color: #007bff; /* Primary color for "See All" */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    text-decoration: underline; /* Underline to indicate it's a link */
+  }
+  
+  /* Styling for the table */
+  table {
+    width: 100%; /* Full width of the container */
+    border-collapse: collapse; /* Collapse borders */
+    margin-top: 20px; /* Space above the table */
+  }
+  
+  /* Styling for table headers and cells */
+  th, td {
+    border: 1px solid #ddd; /* Light gray border */
+    padding: 10px; /* Padding inside cells */
+    text-align: left; /* Align text to the left */
+  }
+  
+  /* Styling for table headers */
+  th {
+    background-color: #f2f2f2; /* Light gray background for headers */
+    font-weight: bold; /* Bold text in headers */
+  }
+  
+  /* Alternating row colors for better readability */
+  tr:nth-child(even) {
+    background-color: #f9f9f9; /* Light background for even rows */
+  }
+  
+  tr:nth-child(odd) {
+    background-color: #fff; /* White background for odd rows */
+  }
+  
+  /* Responsive table styling */
+  @media (max-width: 600px) {
+    table {
+      font-size: 0.9em; /* Slightly smaller text on smaller screens */
+    }
+  
+    th, td {
+      padding: 8px; /* Reduced padding on smaller screens */
+    }
+  }
+  
+  
+  
+  
+  
